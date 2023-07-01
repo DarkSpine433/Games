@@ -1,0 +1,114 @@
+#container-object {
+  width: 80%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  height: 50%;
+}
+
+.object {
+  top: 0%;
+  cursor: pointer;
+  width: 4rem;
+  background-color: red;
+  border: 4px solid black;
+  position: absolute;
+  height: 10vh;
+  left: 0;
+  animation: 1s ease-in-out alternate infinite;
+}
+@keyframes hard {
+  0% {
+    transform: translate(-250%, 500%);
+  }
+}
+
+#point-wraper span {
+  font-size: 200%;
+}
+
+#point-wraper {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  z-index: 6;
+  pointer-events: none;
+  font-size: 200%;
+}
+
+#point {
+  color: rgb(0, 243, 0);
+}
+
+#bg-res {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.922);
+  height: 100vh;
+  display: none;
+  z-index: 10;
+}
+
+#rest {
+  font-size: 200%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10rem;
+  height: 4rem;
+  cursor: pointer;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#result {
+  font-size: 200%;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  width: 10rem;
+  height: 4rem;
+  cursor: pointer;
+  transform: translateX(-50%) translateY(-50%);
+  color: white;
+}
+#result div {
+  color: red;
+  font-weight: bold;
+}
+
+#timer {
+  background-color: black;
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  right: 5%;
+  top: 7%;
+  padding: 20px;
+  font-size: 200%;
+  z-index: 6;
+  pointer-events: none;
+}
+
+*,
+html,
+body {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border: 0;
+}
+
+body {
+  background: url("https://picsum.photos/3840/2160.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}/*# sourceMappingURL=style.css.map */

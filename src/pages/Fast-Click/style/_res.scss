@@ -1,0 +1,35 @@
+#bg-res {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.922);
+  height: 100vh;
+  display: none;
+  z-index: 10;
+}
+#rest {
+  font-size: 200%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10rem;
+  height: 4rem;
+  cursor: pointer;
+  transform: translateX(-50%) translateY(-50%);
+}
+#result {
+  font-size: 200%;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  width: 10rem;
+  height: 4rem;
+  cursor: pointer;
+  transform: translateX(-50%) translateY(-50%);
+  color: white;
+  div {
+    color: red;
+    font-weight: bold;
+  }
+}

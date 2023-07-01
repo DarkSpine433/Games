@@ -1,0 +1,17 @@
+#point-wraper span {
+  font-size: 200%;
+}
+#point-wraper {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  z-index: 6;
+  pointer-events: none;
+  font-size: 200%;
+}
+
+#point {
+  color: rgb(0, 243, 0);
+}
