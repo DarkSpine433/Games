@@ -1,9 +1,10 @@
 const containerObject = document.getElementById("container-object");
 const maxWidht = containerObject.offsetWidth;
+//game seting
+const sec = 19;
 const numberOfObject = maxWidht > 1000 ? 7 : 3;
 const maxPoint = numberOfObject;
 const maxHeight = containerObject.offsetHeight;
-const sec = 29;
 
 // Number of objects
 for (let i = 1; i <= numberOfObject; i++) {
@@ -19,8 +20,24 @@ for (let i = 1; i <= numberOfObject; i++) {
 }
 
 // Random position
-for (let i = 1; i <= maxPoint; i++) {
-  const object = document.getElementById("object-" + i);
+function Rposition() {
+  for (let i = 1; i <= maxPoint; i++) {
+    const object = document.getElementById("object-" + i);
+    const maxValue = maxWidht;
+    const minValue = 0;
+    const math = Math.floor(Math.random() * (maxValue - minValue));
+    object.style.left = math + "px";
+
+    const maxValueH = maxHeight;
+    const mathH = Math.floor(Math.random() * (maxValueH - minValue));
+    object.style.top = mathH + "px";
+  }
+}
+Rposition();
+window.addEventListener("resize", Rposition);
+// After click respown
+function dp(n) {
+  const object = document.getElementById("object-" + n);
   const maxValue = maxWidht;
   const minValue = 0;
   const math = Math.floor(Math.random() * (maxValue - minValue));
@@ -30,7 +47,6 @@ for (let i = 1; i <= maxPoint; i++) {
   const mathH = Math.floor(Math.random() * (maxValueH - minValue));
   object.style.top = mathH + "px";
 }
-
 // Counter points
 let counter = 0;
 const point = document.getElementById("point");
@@ -50,19 +66,6 @@ function up() {
   }
 }
 
-// After click respown
-function dp(n) {
-  const object = document.getElementById("object-" + n);
-  const maxValue = maxWidht;
-  const minValue = 0;
-  const math = Math.floor(Math.random() * (maxValue - minValue));
-  object.style.left = math + "px";
-
-  const maxValueH = maxHeight;
-  const mathH = Math.floor(Math.random() * (maxValueH - minValue));
-  object.style.top = mathH + "px";
-}
-
 // Restart page
 function rel() {
   location.reload();
@@ -74,7 +77,7 @@ document.addEventListener("click", function (event) {
     let seconds = sec;
     const timer = document.getElementById("timer");
     const interval = setInterval(() => {
-      timer.innerHTML = "Timer: " + seconds + "s";
+      timer.innerHTML = seconds + "s";
       seconds--;
 
       if (seconds === 0) {

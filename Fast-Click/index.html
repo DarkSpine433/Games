@@ -7,15 +7,25 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <!--MAIN Script-->
+    <script>
+       // Check if file is completely ready
+        $(document).ready(function () {
+            $('#bg-vid-jq').load('./components/vid.html');
+            });
+        
+ 
+    </script>
     <script defer src="./script.js"></script>
   
     
   </head>
   <body>
+    <!--bg vid-->
+    <div id="bg-vid-jq"></div>
     
     <button id="Register">Register</button>
     <!--time counter-->
-    <div id="timer">Timer: 30s</div><span>
+    <div id="timer">You Got Only 20s. Better be Quick</div><span>
     <!--point counter-->
     <div id="point-wraper"><span id="point">0</span></div>
     <div id="container-object">

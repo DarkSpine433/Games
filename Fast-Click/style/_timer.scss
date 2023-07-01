@@ -1,10 +1,11 @@
+@import "./var";
+
 #timer {
   background-color: black;
   color: white;
-
   width: fit-content;
   position: absolute;
-  right: 5%;
+  right: $PostionTimerAndCounet;
   top: 7%;
   padding: 20px;
   font-size: 200%;

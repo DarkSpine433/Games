@@ -2,7 +2,9 @@
 @import "./style/points";
 @import "./style/res";
 @import "./style/timer";
-*,
+@import "./style/bgVid";
+@import "./style/var";
+
 html,
 body {
   padding: 0;
@@ -11,7 +13,7 @@ body {
   border: 0;
 }
 body {
-  background: url("https://picsum.photos/3840/2160.webp");
+  background: black;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;

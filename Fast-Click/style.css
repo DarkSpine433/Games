@@ -11,13 +11,19 @@
 .object {
   top: 0%;
   cursor: pointer;
-  width: 4rem;
-  background-color: red;
-  border: 4px solid black;
+  width: 7rem;
+  height: 7rem;
+  background: white;
+  border: 1px solid black;
+  box-shadow: 0px 0px 10px black;
+  transition: all 0.1s;
   position: absolute;
-  height: 10vh;
   left: 0;
   animation: 1s ease-in-out alternate infinite;
+}
+.object:hover {
+  border-radius: 10px;
+  background: red;
 }
 @keyframes hard {
   0% {
@@ -31,17 +37,18 @@
 
 #point-wraper {
   position: absolute;
-  left: 5%;
-  top: 5%;
-  background-color: rgb(0, 0, 0);
-  padding: 10px;
+  left: 15%;
+  top: 7%;
+  background-color: rgba(0, 0, 0, 0.452);
+  padding: 5px 40px;
   z-index: 6;
   pointer-events: none;
   font-size: 200%;
 }
 
 #point {
-  color: rgb(0, 243, 0);
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 10px black;
 }
 
 #bg-res {
@@ -59,11 +66,17 @@
   font-size: 200%;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 60%;
   width: 10rem;
   height: 4rem;
   cursor: pointer;
   transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0px 0px 10px black;
+  transition: all 0.1s;
+}
+#rest:hover {
+  border-radius: 10px;
+  background: red;
 }
 
 #result {
@@ -88,7 +101,7 @@
   width: -moz-fit-content;
   width: fit-content;
   position: absolute;
-  right: 5%;
+  right: 15%;
   top: 7%;
   padding: 20px;
   font-size: 200%;
@@ -96,7 +109,16 @@
   pointer-events: none;
 }
 
-*,
+#bg-vid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  -o-object-fit: none;
+     object-fit: none;
+  width: 100%;
+}
+
 html,
 body {
   padding: 0;
@@ -106,7 +128,7 @@ body {
 }
 
 body {
-  background: url("https://picsum.photos/3840/2160.webp");
+  background: black;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
