@@ -72,20 +72,23 @@ function rel() {
 }
 
 // Timer
-document.addEventListener("click", function (event) {
-  if (event.target.classList.contains("object")) {
-    let seconds = sec;
-    const timer = document.getElementById("timer");
-    const interval = setInterval(() => {
-      timer.innerHTML = seconds + "s";
-      seconds--;
+// document.addEventListener("click", function (event) {
+//   if (event.target.classList.contains("object")) {
+let seconds = sec;
+const timer = document.getElementById("timer");
+setTimeout(() => {
+  const interval = setInterval(() => {
+    timer.innerHTML = seconds + "s";
+    seconds--;
 
-      if (seconds === 0) {
-        clearInterval(interval);
-        const afterTimer = document.getElementById("bg-res");
-        afterTimer.style.display = "block";
-      }
-    }, 1000);
-    document.removeEventListener("click", arguments.callee);
-  }
-});
+    if (seconds === -1) {
+      clearInterval(interval);
+      const afterTimer = document.getElementById("bg-res");
+      afterTimer.style.display = "block";
+    }
+  }, 1000);
+}, 1300);
+
+// document.removeEventListener("click", arguments.callee);
+//   }
+// });

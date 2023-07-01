@@ -4,6 +4,7 @@
 @import "./style/timer";
 @import "./style/bgVid";
 @import "./style/var";
+@import "./style/loader";
 
 html,
 body {
@@ -11,6 +12,12 @@ body {
   margin: 0 auto;
   box-sizing: border-box;
   border: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
 }
 body {
   background: black;

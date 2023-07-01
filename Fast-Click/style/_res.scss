@@ -20,12 +20,19 @@
   box-shadow: 0px 0px 10px black;
   transition: all 0.1s;
   &:hover {
+    transition: all 0.1s;
+
+    box-shadow: 0px 0px 10px rgb(255, 0, 0);
     border-radius: 10px;
+    border: 1px solid red;
     background: red;
+    color: white;
+    text-transform: uppercase;
+    width: 12rem;
   }
 }
 #result {
-  font-size: 200%;
+  font-size: 250%;
   position: absolute;
   left: 50%;
   top: 30%;
