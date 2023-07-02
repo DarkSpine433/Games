@@ -34,10 +34,10 @@ function Rposition() {
     const object = document.getElementById("object-" + i);
     const maxValue = maxWidth;
     const minValue = 0;
-    const math = Math.floor(Math.random() * (maxValue - minValue));
+    const math = Math.floor(Math.random() * (maxValue - +minValue));
     object.style.left = math + "px";
 
-    const mathH = Math.floor(Math.random() * maxHeight);
+    const mathH = Math.floor(Math.random() * (maxHeight - minValue));
     object.style.top = mathH + "px";
   }
 }
@@ -49,10 +49,10 @@ function dp(n) {
   const object = document.getElementById("object-" + n);
   const maxValue = maxWidth;
   const minValue = 0;
-  const math = Math.floor(Math.random() * (maxValue - minValue));
+  const math = Math.floor(Math.random() * (maxValue - +minValue));
   object.style.left = math + "px";
 
-  const mathH = Math.floor(Math.random() * maxHeight);
+  const mathH = Math.floor(Math.random() * (maxHeight - minValue));
   object.style.top = mathH + "px";
 }
 
