@@ -160,6 +160,18 @@
   -o-object-fit: none;
      object-fit: none;
   width: 100%;
+  animation: disappeare 3.2s forwards;
+}
+@keyframes disappeare {
+  90% {
+    opacity: 100;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    transform: scale(2);
+  }
 }
 
 #loader {
