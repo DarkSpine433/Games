@@ -1,18 +1,28 @@
 const containerObject = document.getElementById("container-object");
+
 const maxWidht = containerObject.offsetWidth;
 //game seting
 const sec = 19;
-const numberOfObject = maxWidht > 1000 ? 7 : 3;
+const mobileOB = 3;
+const PcOB = 7;
+const numberOfObject = maxWidht > 1000 ? PcOB : mobileOB;
 const maxPoint = numberOfObject;
 const maxHeight = containerObject.offsetHeight;
 
 // Number of objects
 for (let i = 1; i <= numberOfObject; i++) {
   const newObject = document.createElement("button");
+  newObject.draggable = "true";
   newObject.textContent = "";
   newObject.id = "object-" + i;
   newObject.className = "object";
+  newObject.tabIndex = "-1";
+  newObject.type = "text";
   newObject.addEventListener("click", () => {
+    dp(i);
+    up();
+  });
+  newObject.addEventListener("dragend", () => {
     dp(i);
     up();
   });
@@ -59,6 +69,19 @@ function up() {
 
   if (counter >= 25) {
     point.style.color = "yellow";
+
+    document
+      .getElementById("point-wraper")
+      .addEventListener("mouseover", () => {
+        point.style.opacity = "20%";
+        point.style.color = "red";
+      });
+    document
+      .getElementById("point-wraper")
+      .addEventListener("mouseleave", () => {
+        point.style.opacity = "100%";
+        point.style.color = "yellow";
+      });
   }
 
   if (counter >= 50) {

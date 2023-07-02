@@ -4,6 +4,7 @@
   font-size: 200%;
 }
 #point-wraper {
+  user-select: none;
   position: absolute;
   left: $PostionTimerAndCounet;
   top: 7%;
