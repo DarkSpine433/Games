@@ -104,3 +104,7 @@ setTimeout(() => {
     }
   }, 1000);
 }, 1300);
+
+addEventListener("resize", () => {
+  location.reload();
+});
