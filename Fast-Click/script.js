@@ -3,7 +3,7 @@ const containerObject = document.getElementById("container-object");
 const maxWidth = containerObject.offsetWidth;
 const sec = 19;
 const mobileOB = 3;
-const pcOB = 7;
+const pcOB = 10;
 const numberOfObject = maxWidth > 1000 ? pcOB : mobileOB;
 const maxPoint = numberOfObject;
 const maxHeight = containerObject.offsetHeight;
@@ -29,20 +29,17 @@ for (let i = 1; i <= numberOfObject; i++) {
 }
 
 // Random position
-function Rposition() {
-  for (let i = 1; i <= maxPoint; i++) {
-    const object = document.getElementById("object-" + i);
-    const maxValue = maxWidth;
-    const minValue = 0;
-    const math = Math.floor(Math.random() * (maxValue - +minValue));
-    object.style.left = math + "px";
 
-    const mathH = Math.floor(Math.random() * (maxHeight - minValue));
-    object.style.top = mathH + "px";
-  }
+for (let i = 1; i <= maxPoint; i++) {
+  const object = document.getElementById("object-" + i);
+  const maxValue = maxWidth;
+  const minValue = 0;
+  const math = Math.floor(Math.random() * (maxValue - +minValue));
+  object.style.left = math + "px";
+
+  const mathH = Math.floor(Math.random() * (maxHeight - minValue));
+  object.style.top = mathH + "px";
 }
-Rposition();
-window.addEventListener("resize", Rposition);
 
 // After click respawn
 function dp(n) {
