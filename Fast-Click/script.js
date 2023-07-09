@@ -105,3 +105,8 @@ setTimeout(() => {
 addEventListener("resize", () => {
   location.reload();
 });
+
+addEventListener("keypress", () => {
+  window.alert("Only Clicking");
+  location.reload();
+});
