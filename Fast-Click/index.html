@@ -5,23 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fast Click</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <!--MAIN Script-->
-    <script>
-       // Check if file is completely ready
-        $(document).ready(function () {
-            $('#bg-vid-jq').load('./components/vid.html');
-            });
-        
- 
-    </script>
     <script defer src="./script.js"></script>
   
 
   </head>
   <body>
-    <!--bg vid-->
-    <div id="bg-vid-jq"></div>
+   
+   <!--bg vid-->
+<video id="bg-vid" autoplay muted loop>
+  <source id="bg-vid-src" src="../bg/vid/vid bg games.mp4" type="video/mp4" />
+</video>
+
     <div id="loading-screen">
       <div id="content-1">You Have Only 20s</div>
       <div id="content-2">Good Luck </div>
